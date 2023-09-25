@@ -5,8 +5,23 @@
             body {
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 1em;
-                padding: 2rem;
+                padding: 0;
                 margin: 0;
+            }
+            @media print {
+                .content {
+                    padding: 2rem;
+                    margin: 0;
+                }
+            }
+            @media screen {
+                body {
+                    display: flex;
+                    justify-content: center;
+                }
+                .content {
+                    width: 1000px;
+                }
             }
             ul {
                 list-style-type: none;
@@ -158,158 +173,160 @@
         </style>
     </head>
     <body>
-        <div class="left-column">
-            <div class="avatar">
-                <img src="rinchen-profile-picture-2.jpg">
+        <div class="content">
+            <div class="left-column">
+                <div class="avatar">
+                    <img src="rinchen-profile-picture-2.jpg">
+                </div>
+                <ul class="contact-details">
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            Lagos, Portugal
+                        </div>
+                    </li>
+                </ul>
+                <h1>Personal Details</h1>
+                <h2>Date of Birth</h2>
+                17-01-1978
+                <h2>Nationality</h2>
+                Dutch
+                <h2>Fluent Languages</h2>
+                English, Dutch
+                <h1>Skills</h1>
+                <ul class="skills">
+                    <li>React</li>
+                    <li>Typescript</li>
+                    <li>Javascript</li>
+                    <li>NodeJS</li>
+                    <li>AWS</li>
+                    <li>Angular(JS)</li>
+                    <li>jQuery</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>SQL</li>
+                    <li>PHP</li>
+                    <li>Agile</li>
+                </ul>
+                <h1>Links</h1>
+                <a href="https://www.linkedin.com/in/pierrehavelaar/">linkedin.com/in/pierrehavelaar</a>
             </div>
-            <ul class="contact-details">
-                <li>
-                    <i class="fas fa-location-dot"></i>
-                    <div>
-                        Lagos, Portugal
+            <div class="right-column">
+                <header>
+                    Pierre Havelaar
+                    <div class="subtitle">Senior Software Engineer</div>
+                </header>
+                <article>
+                    <h1>About me</h1>
+                    <p>
+                        With 25 years of experience in Software Engineering across multiple industries I am capable of taking on new assignments and technologies with ease. 
+                        I easily adapt to new situations, acquire new knowledge quickly and am able to transfer that to others. 
+                        My strength is to digest complex functional requirements and build a solid and clean codebase.
+                        By having been self-employed for over half a decade I understand the need to focus on business value at all times.
+                    </p>
+                    
+                    <h1>Work Experience</h1>
+                    <div class="position">
+                        <div class="header-item">
+                            <div class="title">Senior Software Engineer</div>
+                            <div class="date">Jun 2023 - Present</div>
+                        </div>
+                        <div class="header-item">
+                            <div class="company">Move Work Forward</div>
+                            <div class="location">Singapore - Remote</div>
+                        </div>
+                        <div class="description">
+                            At Move Work Forward I have helped modernizing the UI of their Atlassian integrations with React and made integrations with Typeform and Mixpanel 
+                            on the backend on AWS. Created a survey result processing backend with Typescript, Node, Serverless & AWS Lambda. Integrated eslint in to our Cloud Apps
+                            Monorepo. Greatly reduced deployment size of Lambda functions. Reduced cold start time for Lambda functions by at least 80%.
+                        </div>
                     </div>
-                </li>
-            </ul>
-            <h1>Personal Details</h1>
-            <h2>Date of Birth</h2>
-            17-01-1978
-            <h2>Nationality</h2>
-            Dutch
-            <h2>Fluent Languages</h2>
-            English, Dutch
-            <h1>Skills</h1>
-            <ul class="skills">
-                <li>React</li>
-                <li>Typescript</li>
-                <li>Javascript</li>
-                <li>NodeJS</li>
-                <li>AWS</li>
-                <li>Angular(JS)</li>
-                <li>jQuery</li>
-                <li>Java</li>
-                <li>C++</li>
-                <li>SQL</li>
-                <li>PHP</li>
-                <li>Agile</li>
-            </ul>
-            <h1>Links</h1>
-            <a href="https://www.linkedin.com/in/pierrehavelaar/">linkedin.com/in/pierrehavelaar</a>
-        </div>
-        <div class="right-column">
-            <header>
-                Pierre Havelaar
-                <div class="subtitle">Senior Software Engineer</div>
-            </header>
-            <article>
-                <h1>About me</h1>
-                <p>
-                    With 25 years of experience in Software Engineering across multiple industries I am capable of taking on new assignments and technologies with ease. 
-                    I easily adapt to new situations, acquire new knowledge quickly and am able to transfer that to others. 
-                    My strength is to digest complex functional requirements and build a solid and clean codebase.
-                    By having been self-employed for over half a decade I understand the need to focus on business value at all times.
-                </p>
-                
-                <h1>Work Experience</h1>
-                <div class="position">
-                    <div class="header-item">
-                        <div class="title">Senior Software Engineer</div>
-                        <div class="date">Jun 2023 - Present</div>
+                    <div class="position">
+                        <div class="header-item">
+                            <div class="title">Senior Software Engineer</div>
+                            <div class="date">Aug 2019 - Oct 2021</div>
+                        </div>
+                        <div class="header-item">
+                            <div class="company">Clubhouse Software</div>
+                            <div class="location">New York, US - Remote</div>
+                        </div>
+                        <div class="description">Clubhouse is developing a software project management tool that is easy and fun to use that can compete with Jira. 
+                            Here I worked on the frontend development using their in-house web development framework and React. 
+                            Over the course of 2 years we managed to migrate most of the code to React. 
+                            I also worked on the refactoring of the billing system to implement new Payment plans and allow for easy upgrades and downgrades of these plans. 
+                            The billing system is a complex beast with many intricate business rules and it is imperative those rules are not broken. 
+                            We were able to deliver this project with zero downtime and no significant bugs in the system and immediately resulted in an increase in paid plans 
+                            in the first month of being released.                    
+                        </div>
                     </div>
-                    <div class="header-item">
-                        <div class="company">Move Work Forward</div>
-                        <div class="location">Singapore - Remote</div>
+                    <div class="position">
+                        <div class="header-item">
+                            <div class="title">Senior Software Engineer</div>
+                            <div class="date">Feb 2016 - July 2019</div>
+                        </div>
+                        <div class="header-item">
+                            <div class="company">Engage Technology Partners</div>
+                            <div class="location">London, UK - Remote</div>
+                        </div>
+                        <div class="description">At Engage as a remote engineer I was able to put my frontend skills to good use on our fast evolving platform. 
+                            Being initially hired as a frontend engineer, I soon also started working on the Java backend and initiated projects in Node.js and AWS Lambda. 
+                            After having been supporting the onboarding team for a while I became responsible for upgrading our platform so that the onboarding team could set up clients without the need of Engineering. 
+                            It was a massive collaborative effort between engineering teams, onboarding and client services that I had to coordinate. 
+                            It was delivered on time and it was a great success. After this I continued to be responsible for multiple projects as well as assisting the Team Manager.
+                        </div>
                     </div>
-                    <div class="description">
-                        At Move Work Forward I have helped modernizing the UI of their Atlassian integrations with React and made integrations with Typeform and Mixpanel 
-                        on the backend on AWS. Created a survey result processing backend with Typescript, Node, Serverless & AWS Lambda. Integrated eslint in to our Cloud Apps
-                        Monorepo. Greatly reduced deployment size of Lambda functions. Reduced cold start time for Lambda functions by at least 80%.
+                    <div class="position">
+                        <div class="header-item">
+                            <div class="title">Senior Software Engineer</div>
+                            <div class="date">Apr 2013 - Jan 2016</div>
+                        </div>
+                        <div class="header-item">
+                            <div class="company">Finalist</div>
+                            <div class="location">Rotterdam, NL</div>
+                        </div>
+                        <div class="description">At Finalist I joined a team of skilled professionals where I felt at home and had the opportunity to grow.
+                            We were responsible for the Enterprise Business Application of a customer, called Spotta, which is a large player on the market of delivering physical advertisements in the form of product leaflets. 
+                            The system is complex and has a long history that contains in depth domain knowledge. The largest part of the software runs in Jboss/Wildfly EAP, which is a Java EE container. 
+                            I delivered a fully automated deployment system to be able to deploy and migrate their complete set of software to the Azure Cloud, which had been running on custom servers before.
+                        </div>
                     </div>
-                </div>
-                <div class="position">
-                    <div class="header-item">
-                        <div class="title">Senior Software Engineer</div>
-                        <div class="date">Aug 2019 - Oct 2021</div>
+                    <div class="position">
+                        <div class="header-item">
+                            <div class="title">Software Engineer</div>
+                            <div class="date">Sep 2009 - Sep 2012</div>
+                        </div>
+                        <div class="header-item">
+                            <div class="company">Greencat IT</div>
+                            <div class="location">Gorinchem, NL</div>
+                        </div>
+                        <div class="description">I helped build a Java Enterprise web application that communicates in real-time with the on-board computer of a fleet of trucks, processes the datastream and makes the information visible, also in real-time. 
+                            The current location of all the trucks is displayed on the map along with its route, assigments, speeds, etc. By using the Google Web Toolkit the browser was being pushed to the limits.
+                            I was responsible for building custom GWT widgets that can display the vast realtime data with high performance. As well as processing the large amounts of data on the backend.
+                        </div>
                     </div>
-                    <div class="header-item">
-                        <div class="company">Clubhouse Software</div>
-                        <div class="location">New York, US - Remote</div>
-                    </div>
-                    <div class="description">Clubhouse is developing a software project management tool that is easy and fun to use that can compete with Jira. 
-                        Here I worked on the frontend development using their in-house web development framework and React. 
-                        Over the course of 2 years we managed to migrate most of the code to React. 
-                        I also worked on the refactoring of the billing system to implement new Payment plans and allow for easy upgrades and downgrades of these plans. 
-                        The billing system is a complex beast with many intricate business rules and it is imperative those rules are not broken. 
-                        We were able to deliver this project with zero downtime and no significant bugs in the system and immediately resulted in an increase in paid plans 
-                        in the first month of being released.                    
-                    </div>
-                </div>
-                <div class="position">
-                    <div class="header-item">
-                        <div class="title">Senior Software Engineer</div>
-                        <div class="date">Feb 2016 - July 2019</div>
-                    </div>
-                    <div class="header-item">
-                        <div class="company">Engage Technology Partners</div>
-                        <div class="location">London, UK - Remote</div>
-                    </div>
-                    <div class="description">At Engage as a remote engineer I was able to put my frontend skills to good use on our fast evolving platform. 
-                        Being initially hired as a frontend engineer, I soon also started working on the Java backend and initiated projects in Node.js and AWS Lambda. 
-                        After having been supporting the onboarding team for a while I became responsible for upgrading our platform so that the onboarding team could set up clients without the need of Engineering. 
-                        It was a massive collaborative effort between engineering teams, onboarding and client services that I had to coordinate. 
-                        It was delivered on time and it was a great success. After this I continued to be responsible for multiple projects as well as assisting the Team Manager.
-                    </div>
-                </div>
-                <div class="position">
-                    <div class="header-item">
-                        <div class="title">Senior Software Engineer</div>
-                        <div class="date">Apr 2013 - Jan 2016</div>
-                    </div>
-                    <div class="header-item">
-                        <div class="company">Finalist</div>
-                        <div class="location">Rotterdam, NL</div>
-                    </div>
-                    <div class="description">At Finalist I joined a team of skilled professionals where I felt at home and had the opportunity to grow.
-                        We were responsible for the Enterprise Business Application of a customer, called Spotta, which is a large player on the market of delivering physical advertisements in the form of product leaflets. 
-                        The system is complex and has a long history that contains in depth domain knowledge. The largest part of the software runs in Jboss/Wildfly EAP, which is a Java EE container. 
-                        I delivered a fully automated deployment system to be able to deploy and migrate their complete set of software to the Azure Cloud, which had been running on custom servers before.
-                    </div>
-                </div>
-                <div class="position">
-                    <div class="header-item">
-                        <div class="title">Software Engineer</div>
-                        <div class="date">Sep 2009 - Sep 2012</div>
-                    </div>
-                    <div class="header-item">
-                        <div class="company">Greencat IT</div>
-                        <div class="location">Gorinchem, NL</div>
-                    </div>
-                    <div class="description">I helped build a Java Enterprise web application that communicates in real-time with the on-board computer of a fleet of trucks, processes the datastream and makes the information visible, also in real-time. 
-                        The current location of all the trucks is displayed on the map along with its route, assigments, speeds, etc. By using the Google Web Toolkit the browser was being pushed to the limits.
-                        I was responsible for building custom GWT widgets that can display the vast realtime data with high performance. As well as processing the large amounts of data on the backend.
-                    </div>
-                </div>
-            </article>
-        </div>
-        <div class="extranous">
-            <h1>Previous Experiences</h1>
-            <ul class="circles">
-                <li>5 years as a business owner</li>
-                <li>4 years in Game Development</li>
-                <li>2 years in Biotech prototype development</li>
-            </ul>
+                </article>
+            </div>
+            <div class="extranous">
+                <h1>Previous Experiences</h1>
+                <ul class="circles">
+                    <li>5 years as a business owner</li>
+                    <li>4 years in Game Development</li>
+                    <li>2 years in Biotech prototype development</li>
+                </ul>
 
-            <h1>Volunteer Work</h1>
-            <ul class="circles">
-                <li>3D print face shields during pandemic for frontline workers</li>
-                <li>Designed and developed a website for individuals seeking to reintegrate into society and secure employment, facilitating social connections and community engagement.</li>
-                <li>Develop and maintain website for Buddhist center</li>
-                <li>Raised money for Hepatitis B vaccinations in India</li>
-                <li>Movie VFX</li>
-                <li>Assistent Paragliding Instructor</li>
-            </ul>
+                <h1>Volunteer Work</h1>
+                <ul class="circles">
+                    <li>3D print face shields during pandemic for frontline workers</li>
+                    <li>Designed and developed a website for individuals seeking to reintegrate into society and secure employment, facilitating social connections and community engagement.</li>
+                    <li>Develop and maintain website for Buddhist center</li>
+                    <li>Raised money for Hepatitis B vaccinations in India</li>
+                    <li>Movie VFX</li>
+                    <li>Assistent Paragliding Instructor</li>
+                </ul>
 
-            <h1>Interests</h1>
-            FPV Drones, Electronics, Home Automation, Self Sustainability, Renewable Energy.
+                <h1>Interests</h1>
+                FPV Drones, Electronics, Home Automation, Self Sustainability, Renewable Energy.
+            </div>
         </div>
     </body>
 </html>
