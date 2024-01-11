@@ -2,6 +2,20 @@
     <head>
         <script src="https://kit.fontawesome.com/adb3f668fc.js" crossorigin="anonymous"></script>
         <style>
+            :root {
+                --background-color-sidebar: #e4d4c8;
+                --text-color-sidebar: #777;
+                --text-color-strong-sidebar: #333; 
+                --background-color-badge: #343537; 
+                --text-color-badge: #e4d4c8;
+                --background-color-header: #343537
+                /* --background-color-sidebar: #1f3397;
+                --text-color-sidebar: #bbd6ff;
+                --text-color-strong-sidebar: #6095d5;
+                --background-color-badge: #5377be;
+                --text-color-badge: #bbd6ff;
+                --background-color-header: #13205f; */
+            }
             body {
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 1em;
@@ -56,9 +70,9 @@
                 padding-left: 2em;
             }
             .left-column {
-                color: #444;
+                color: var(--text-color-sidebar);
                 font-size: 0.8em;
-                background-color: #e4d4c8;
+                background-color: var(--background-color-sidebar);
                 width: 13rem;
                 float: left;
                 border-top-left-radius: 15px;
@@ -66,6 +80,7 @@
                 padding: 1.2rem;
             }
             .left-column h1 {
+                color: var(--text-color-strong-sidebar);
                 text-transform: uppercase;
                 font-size: 1.2em;
                 font-weight: 500;
@@ -74,7 +89,7 @@
                 padding-top: 1.5rem;
             }
             .left-column h2 {
-                color: #555;
+                color: var(--text-color-strong-sidebar);
                 font-size: 1.15em;
                 font-weight: 400;
                 margin-bottom: 0;
@@ -83,14 +98,15 @@
             .left-column a {
                 text-decoration: none;
             }
+            .left-column a,
             .left-column a:visited {
-                color: rgb(0,0,238);
+                color: var(--text-color-sidebar);
             }
             .skills li {
                 display: inline-block;
                 padding: 0.5em 0.8em;
-                background: #343537;
-                color: #e4d4c8;
+                background: var(--background-color-badge);
+                color: var(--text-color-badge);
                 border-radius: 9px;
                 margin-bottom: 0.4em;
             }
@@ -107,7 +123,7 @@
                 margin-left: 1.8em;
             }
             header {
-                background-color: #343537;
+                background-color: var(--background-color-header);
                 border-top-right-radius: 15px;
                 color: white;
                 padding: 0.8em;
@@ -197,7 +213,7 @@
                     <li>
                         <i class="fas fa-location-dot"></i>
                         <div>
-                            Lagos, Portugal
+                            United Kingdom
                         </div>
                     </li>
                 </ul>
@@ -214,14 +230,17 @@
                     <li>Typescript</li>
                     <li>Javascript</li>
                     <li>NodeJS</li>
-                    <li>AWS</li>
-                    <li>Angular(JS)</li>
-                    <li>jQuery</li>
                     <li>Java</li>
                     <li>C++</li>
+                    <li>Python</li>
+                    <li>Angular</li>
+                    <li>jQuery</li>
+                    <li>AWS</li>
                     <li>SQL</li>
                     <li>PHP</li>
                     <li>Agile</li>
+                    <li>Machine Learning</li>
+                    <li>Tensorflow</li>
                 </ul>
                 <h1>Links</h1>
                 <a href="https://www.linkedin.com/in/pierrehavelaar/">linkedin.com/in/pierrehavelaar</a>
@@ -253,7 +272,7 @@
                         <div class="description">
                             At Move Work Forward I have helped modernizing the UI of their Atlassian integrations with React and made integrations with Typeform and Mixpanel 
                             on the backend on AWS. Created a survey result processing backend with Typescript, Node, Serverless & AWS Lambda. Integrated eslint in to our Cloud Apps
-                            Monorepo. Greatly reduced deployment size of Lambda functions. Reduced cold start time for Lambda functions by at least 80%.
+                            Monorepo. Greatly reduced the deployment size of Lambda functions and reduced the cold start time by at least 80%.
                         </div>
                     </div>
                     <div class="position">
@@ -262,10 +281,10 @@
                             <div class="date">Aug 2019 - Oct 2021</div>
                         </div>
                         <div class="header-item">
-                            <div class="company">Clubhouse Software</div>
+                            <div class="company">Shortcut Software</div>
                             <div class="location">New York, US - Remote</div>
                         </div>
-                        <div class="description">Clubhouse is developing a software project management tool that is easy and fun to use that can compete with Jira. 
+                        <div class="description">Shortcut (previously known as Clubhouse) is developing a software project management tool that is easy and fun to use that can compete with Jira. 
                             Here I worked on the frontend development using their in-house web development framework and React. 
                             Over the course of 2 years we managed to migrate most of the code to React. 
                             I also worked on the refactoring of the billing system to implement new Payment plans and allow for easy upgrades and downgrades of these plans. 
